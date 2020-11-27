@@ -27,7 +27,7 @@ def parse_voc_annotation(ann_dir, img_dir, cache_name, labels=[]):
             img['width']=cv2.imread(os.path.join(img_dir,name)).shape[1] 
             img['height']=cv2.imread(os.path.join(img_dir,name)).shape[0] 
             for item in names[name]:
-              img['object'] += [{'name':item[5],'xmin':item[1],'ymin':item[2],'xmax':item[3],'ymax':item[4]}]
+              img['object'] += [{'name':item[5],'xmin':int(item[1]),'ymin':int(item[2]),'xmax':int(item[3]),'ymax':int(item[4])}]
               if item[5] in seen_labels:
                 seen_labels[item[5]] += 1
               else:
