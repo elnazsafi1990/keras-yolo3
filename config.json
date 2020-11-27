@@ -31,9 +31,9 @@
     },
 
     "valid": {
-        "valid_image_folder":   "",
-        "valid_annot_folder":   "",
-        "cache_name":           "",
+        "valid_image_folder":   "selected_images",
+        "valid_annot_folder":   "selected_images/test.csv",
+        "cache_name":           "raccoon_test.pkl",
 
         "valid_times":          1
     }
