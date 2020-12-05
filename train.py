@@ -254,7 +254,7 @@ def _main_(args):
     ###############################
     #   Kick off the training
     ###############################
-    callbacks = create_callbacks('model_{{epoch:02d}}_{{loss:.4f}}_.h5', config['train']['tensorboard_dir'], infer_model)
+    callbacks = create_callbacks('model_{epoch:02d}_{loss:.4f}_.h5', config['train']['tensorboard_dir'], infer_model)
 
     train_model.fit_generator(
         generator        = train_generator, 
