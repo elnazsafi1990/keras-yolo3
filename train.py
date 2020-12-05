@@ -254,7 +254,7 @@ def _main_(args):
     ###############################
     #   Kick off the training
     ###############################
-    import os
+
     try:
       os.mkdir('models')
     except:
