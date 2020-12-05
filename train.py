@@ -254,7 +254,8 @@ def _main_(args):
     ###############################
     #   Kick off the training
     ###############################
-    callbacks = create_callbacks(config['train']['saved_weights_name'], config['train']['tensorboard_dir'], infer_model)
+    checkpoint = keras.callbacks.ModelCheckpoint('model_{{epoch:02d}}_{{map:.4f}}_.h5'),verbose=1,save_best_only=True,monitor="mAP", mode='max')
+    callbacks = create_callbacks(checkpoint, config['train']['tensorboard_dir'], infer_model)
 
     train_model.fit_generator(
         generator        = train_generator, 
