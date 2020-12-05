@@ -1,7 +1,7 @@
 {
     "model" : {
-        "min_input_size":       680,
-        "max_input_size":       400,
+        "min_input_size":       400,
+        "max_input_size":       680,
         "anchors":              [10,23, 13,27, 14,35, 17,45, 17,65, 19,33, 23,53, 24,41, 27,69],
         "labels":               ["mask","no"]
     },
