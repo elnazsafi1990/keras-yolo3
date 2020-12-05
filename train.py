@@ -254,7 +254,13 @@ def _main_(args):
     ###############################
     #   Kick off the training
     ###############################
-    callbacks = create_callbacks('model_{epoch:02d}_{loss:.4f}_.h5', config['train']['tensorboard_dir'], infer_model)
+    import os
+    try:
+      os.mkdir('models')
+    except:
+      pass
+    callbacks = create_callbacks('models/model_{epoch:02d}_{loss:.4f}_.h5', config['train']['tensorboard_dir'], infer_model)
+    print(len(train_generator))
 
     train_model.fit_generator(
         generator        = train_generator, 
